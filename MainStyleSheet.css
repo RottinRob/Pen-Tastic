@@ -1,0 +1,348 @@
+@charset "utf-8";
+body
+ {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #000;	
+	margin: 0;
+	padding: 0;
+	color: #FFF;
+}
+/* ~~ Element/tag selectors ~~ */
+ul, ol 
+{ /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+dl
+{
+	padding: 15;
+	margin-left: 15;
+}
+dt
+{
+	font-weight: bolder;
+	margin-left: 40px;
+}
+dd
+{
+	margin-left: 80px;
+}
+h1
+{
+	margin-top: 15px;
+	padding-right: 15px;
+	padding-left: 15px;
+	font-size: 60px;
+}
+h2, h3, h4, h5, h6, p
+{
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing block. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the blocks, instead of the block elements themselves, gets rid of any box model math. A nested block with side padding can also be used as an alternate method. */
+}
+a img 
+{ /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+a:hover, a:active, a:focus 
+{ /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+/* ~~ This fixed width container surrounds all other blocks ~~ */
+header 
+{
+	filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    opacity: 1;
+	border: none;
+	width: 1080px;
+	height: 200px;
+	background: url(Assets/Pics/newlogo.png);
+	padding: 0px 0px 10px 0px;
+}
+.container 
+{
+	width: 1080px;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+}
+/*Text Columns*/
+#leftcol
+{
+	padding: 30px 0px 20px 15px; 
+	float: left;
+	width: 290px;
+}
+#centercol
+{
+	padding: 30px 0px 10px 15px;
+	width: 290px;
+	float: left;
+}
+#rightcol
+{
+	padding: 30px 0px 20px 0px;
+	float: right;
+	width: 280px;
+}
+/*3 Column Layout*/
+#ltcol
+{
+	margin-left: 15px;
+	width: 250px;
+	float: left;
+	padding: 15px 0px;
+	
+}
+#ctcol
+{
+	width: 250px;
+	float: left;
+	padding: 15px 0px;
+	margin-left: 32px;
+}
+#rtcol
+{
+	width: 250px;
+	float: right;
+	padding: 15px 0px;
+	margin-left: 5px;
+}
+/*2 Column Layout*/
+#colleft
+{
+	width: 300px;
+	float:left;
+	padding: 20px 15px;
+	margin-left: 60px;
+}
+#colright
+{
+	width: 300px;
+	float:left;
+	padding: 20px 0;
+	margin-left: 15px;
+}
+/*Centers of Pictures*/
+#caltext
+{
+	text-align: center;
+	border: none;
+	margin: 0;
+}
+#center
+{
+	padding: 40px 155px 15px 155px;
+}
+#centerpic
+{
+	padding: 32px 0px 15px 70px;
+}
+#centerhalf
+{
+	padding: 30px 0 0 110px;
+}
+#centerfullpic
+{
+	padding: 20px 25px;
+}
+#events
+{
+	text-align: center;
+	padding: 35px 0;
+}
+#temp
+{
+	text-align: center;
+	margin-top: 75px;
+	margin-bottom: 75px;
+}
+#slider 
+{
+	margin-left: 60px;
+    width: 500px;
+    height: 375px;
+    position: relative;
+    overflow: hidden;
+    background: #000;
+}
+ 
+#slider [id^='image']:target img 
+{
+    top: 0;  
+}
+ 
+#slider [id^="image"] img 
+{
+    position: absolute;
+    top: -400px;
+    border: 0;
+    -moz-transition: top 0.5s ease-in;
+    -ms-transition: top 0.5s ease-in;
+    -webkit-transition: top 0.5s ease-in;
+    -o-transition: top 0.5s ease-in;
+}
+#slider [id^='image']:target a 
+{
+    background: #fff;
+    border: 3px solid #333;
+    width: 10px;
+    height: 10px;
+}
+ 
+.slider-nav 
+{
+    background: #333;
+    width: 16px;
+    z-index: 9999;
+    height: 16px;
+    box-shadow: inset 0px 2px 10px rgba(0,0,0,0.3), 0px 0px 20px rgba(255,255,255,0.4);
+    border-radius: 32px;
+    position: absolute;
+    bottom: 15px;
+}
+ 
+#image-1 .slider-nav 
+{
+	right: 80px; 
+}
+#image-2 .slider-nav 
+{ 
+	right: 60px; 
+}
+#image-3 .slider-nav 
+{
+	right: 40px; 
+}
+#image-4 .slider-nav 
+{ 
+	right: 20px; 
+}
+.twitter-timeline
+{
+	width: 200px;
+	float: right;
+	position: relative;
+	margin-left: 0;
+}
+.sidebar1 
+{
+	float: left;
+	width: 250px;
+	opacity: 1.0;
+	padding-right: 0px;
+	padding-bottom: 10px;
+}
+.sidebar2
+{
+	width: 200px;
+	float: right;
+	opacity: 1.0;
+	margin: 0px;
+	padding: 0px;
+	
+}
+.maincontent
+{
+	padding: 20px 0;
+	width: 600px;
+	float: left;
+}
+.content 
+{
+	padding: 20px 0;
+	width: 830px;
+	float: right;
+}
+.deercontent 
+{
+	background: url(Assets/Pics/antlers2.png);
+	background-size: 1080px 1080px;
+	padding: 10px 0;
+	width: 830px;
+	float: right;
+}
+.snakecontent 
+{
+	background: url(Assets/Pics/snakeskin.png);
+	background-size: 830px 650px;
+	padding: 10px 0;
+	width: 830px;
+	float: right;
+}
+.cbcontent 
+{
+	background: url(Assets/Pics/wcircuit-board.png);
+	background-size: 830px 850px;
+	padding: 10px 0;
+	width: 830px;
+	float: right;
+	font-weight: bolder;
+}
+.writingcontent 
+{
+	background-size: 1080px 1080px;
+	width: 830px;
+	float: right;
+	padding: 10px 0;
+	font-weight: bolder;
+}
+/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+.content ul, .content ol 
+{
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+ul.nav 
+{
+	list-style: none; /* this removes the list marker */
+	border-top: 1px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+}
+ul.nav li 
+{
+	border-bottom: 1px solid #666; /* this creates the button separation */
+}
+ul.nav a, ul.nav a:visited 
+{ /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 15px;
+	font-weight: bolder;
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	width: 250px;  /*this width makes the entire button clickable for IE6. If you don't need to support IE6, it can be removed. Calculate the proper width by subtracting the padding on this link from the width of your sidebar container. */
+	text-decoration: none;
+	filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    opacity: 1;
+	color: #999999;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus 
+{ /* this changes the background and text color for both mouse and keyboard navigators */
+	opacity: 1.0;
+	color: #AAD400;
+}
+#link
+{
+	text-decoration: none;
+	color: #AAD400;
+}
+address
+{
+	text-align: right;
+}
+
+footer 
+{
+	text-align: left;
+	padding: 10px 0;
+	filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    opacity: 1;
+	/*position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+}
+
+/*HTML 5 support - Sets new HTML 5 tags to display:block so browsers know how to render the tags properly. */
+header, section, footer, aside, article, figure 
+{
+	display: block;
+}
